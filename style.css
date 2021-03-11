@@ -1,0 +1,213 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Manrope', sans-serif;
+}
+
+
+body{
+     background: hsl(210, 46%, 95%);
+}
+
+.container{
+     width: 80%;
+     margin: 50px auto;
+     background: #fff;
+     border-radius: 10px;
+}
+
+
+.container .card .card-image img{
+     width: 100%;
+     border-top-right-radius: 10px;
+     border-top-left-radius: 10px;
+}
+
+.container .card .card-body{
+     padding: 0 25px;
+}
+
+.container .card .card-body .title h3{
+     margin: 20px 0;
+     color: hsl(217, 19%, 35%);
+     font-weight: 700;
+     font-size: 16px;
+}
+
+.container .card .card-body .card-text p{
+     font-size: 13px;
+     color: hsl(212, 23%, 69%);
+     margin-bottom: 20px;
+}
+
+.container .card .card-bottom{
+     display: flex;
+     justify-content: space-around;
+     position: relative;
+     align-items: center;
+     border-bottom-left-radius: 10px ;
+     border-bottom-right-radius: 10px;
+     overflow: hidden;
+}
+
+
+.container .card .card-bottom .image-avatar img{
+     width: 50px;
+     border-radius: 50%;
+}
+
+.container .card .card-bottom .avatar-info p{
+     font-weight: 900;
+     font-size: 13px;
+     color: hsl(217, 19%, 35%);
+}
+
+.container .card .card-bottom .avatar-info span{
+     font-size: 13px;
+     color: hsl(212, 23%, 69%);
+}
+
+.container .card .card-bottom .btn-share{
+     z-index: 9999;
+}
+
+.btn{
+     background: none;
+     border: none;
+     cursor: pointer;
+     outline: none;
+}
+
+.container .card .card-bottom .btn-share img{
+     border-radius: 50%;
+     padding: 8px;
+     background: hsl(212, 23%, 69%);
+}
+
+.container .card .card-bottom .btn-share img{
+     background: hsl(212, 23%, 69%);
+     transition: .3s background linear;
+}
+
+.container .card .card-bottom .btn-share img:hover{
+     background: hsl(210, 46%, 95%);
+}
+
+.container .card .card-body .share-container{
+     position: absolute;
+     background: hsl(217, 19%, 35%);
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     display: flex;
+     justify-content: flex-start;
+     height: 60px;
+     align-items: center;
+     padding-right: 50px;
+     border-bottom-left-radius: 10px ;
+     border-bottom-right-radius: 10px;
+     transition: .3s transform linear;
+}
+
+.container .card .card-bottom .share-container a{
+     margin: 0 10px;
+     cursor: pointer;
+}
+
+.container .card .card-bottom .share-container p{
+     color: hsl(210, 46%, 95%);
+     font-family: 'Manrope', sans-serif;
+     font-weight: 400;
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     margin-left: 30px;
+     cursor: pointer;
+}
+
+
+.share-container-off{
+     transform: translateY(100px);
+     transition: .3s transform linear;
+}
+
+.attribution{
+     width: 100%;
+     background: rgb(255,0,119);
+     padding: 20px;
+     color: #fff;
+}
+.attribution a{
+     color: #000;
+}
+
+@media screen and (min-width: 768px){
+     .container .card{
+          display: flex;
+     }
+     .container .card .card-image{
+          width: 50%;
+     }
+     .container .card .card-image img{
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 10px;
+     }
+     
+     .container .card .card-body{
+          width: 50%;
+          padding: 50px;
+     }
+
+     .container .card .card-body .title h3{
+          font-size: 24px;
+          font-weight: 700;
+     }
+
+     .container .card .card-body .card-text p{
+          font-size: 16px;
+          margin-bottom: 50px;
+     }
+     
+     .container .card .card-bottom{
+          overflow: visible;
+     }
+     .container .card .card-body .share-container{
+          top:-60px ;
+          left: 225px;
+          width: 75%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 10px;
+          transition: .3s transform linear;
+     }
+     .container .card .card-body .share-container p{
+          margin-right: 20px;
+     }
+
+     .share-container-off{
+          transform: translateY(50px) scale(0);
+     }
+
+     .container .card .card-bottom .avatar-info p{
+          font-size: 16px
+     }
+     
+     .container .card .card-bottom .avatar-info span{
+          font-size: 14px;
+     }
+
+     .container .card .card-body .share-container .polygon-share{
+          width: 0;
+          height: 0;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          border-bottom: 20px solid hsl(217, 19%, 35%);
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%) rotateZ(180deg);
+          z-index: 9998;
+     }
+}
